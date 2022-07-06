@@ -18,6 +18,12 @@ ul.countdown_div li span.digit_content {
 	font-weight:  bold;
 	display: flex;
 }
+@media screen and (max-width: 768px) {
+	ul.countdown_div li span.digit_content {
+		font-size: 30px;
+		line-height: 30px;
+	}
+}
 ul.countdown_div li span.digit_content .digit_content_element{
 	display: inline-block;
 	padding: 10px;
@@ -26,7 +32,12 @@ ul.countdown_div li span.digit_content .digit_content_element{
 	color:  #b7014a;
 	box-shadow: 0 1px 6px rgb(0 0 0 / 3%);
 	filter:  drop-shadow(.2rem .2rem .2rem rgba(136,136,136,.5));
-	margin-right:  5px;
+	margin-right:  2px;
+}
+@media screen and (max-width: 768px) {
+	ul.countdown_div li span.digit_content .digit_content_element{
+		padding:  5px;
+	}
 }
 ul.countdown_div li span.digit_content .digit_content_element:last-child{
 	margin-right:  0;
