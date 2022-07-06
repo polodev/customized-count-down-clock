@@ -18,13 +18,7 @@ ul.countdown_div li span.digit_content {
 	font-weight:  bold;
 	display: flex;
 }
-ul.countdown_div li span.digit_content .digit_content_first{
-	margin-right: 5px;
-}
-ul.countdown_div li span.digit_content .digit_content_second{}
-
-ul.countdown_div li span.digit_content .digit_content_first,
-ul.countdown_div li span.digit_content .digit_content_second {
+ul.countdown_div li span.digit_content .digit_content_element{
 	display: inline-block;
 	padding: 10px;
 	border-radius:  6px;
@@ -32,6 +26,10 @@ ul.countdown_div li span.digit_content .digit_content_second {
 	color:  #b7014a;
 	box-shadow: 0 1px 6px rgb(0 0 0 / 3%);
 	filter:  drop-shadow(.2rem .2rem .2rem rgba(136,136,136,.5));
+	margin-right:  5px;
+}
+ul.countdown_div li span.digit_content .digit_content_element:last-child{
+	margin-right:  0;
 }
 
 ul.countdown_div li.seperator {

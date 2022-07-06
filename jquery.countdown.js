@@ -59,6 +59,7 @@
 
 			// difference of dates
 			var difference = target_date - current_date;
+			console.log('difference', difference)
 
 			// if difference is negative than it's pass the target date
 			if (difference < 0) {
@@ -104,10 +105,59 @@
 				hours = hours.toString().split("");
 				minutes = minutes.toString().split("");
 				seconds = seconds.toString().split("");
+				var days_content = $('<span/>', {class: 'days_digit_content'});
+				days.forEach(letter => {
+					days_content.append(
+						$('<span/>', {
+							text: letter,
+							class: 'digit_content_element',
+						})
+					)				
+				})
+				container.find('.days').html(days_content);
+
+				var hours_content = $('<span/>', {class: 'hours_digit_content'});
+				hours.forEach(letter => {
+					hours_content.append(
+						$('<span/>', {
+							text: letter,
+							class: 'digit_content_element',
+						})
+					)				
+				})
+				container.find('.hours').html(hours_content);
+
+				var minutes_content = $('<span/>', {class: 'minutes_digit_content'});
+				minutes.forEach(letter => {
+					minutes_content.append(
+						$('<span/>', {
+							text: letter,
+							class: 'digit_content_element',
+						})
+					)				
+				})
+				container.find('.minutes').html(minutes_content);
+				var seconds_content = $('<span/>', {class: 'seconds_digit_content'});
+				seconds.forEach(letter => {
+					seconds_content.append(
+						$('<span/>', {
+							text: letter,
+							class: 'digit_content_element',
+						})
+					)				
+				})
+				container.find('.seconds').html(seconds_content);
 
 			// set to DOM
-			container.find('.days').find('.digit_content_first').text(days[0]);
-			container.find('.days').find('.digit_content_second').text(days[1]);
+			// if (days.length == 2) {
+			// 	container.find('.days').find('.digit_content_first').text(days[0]);
+			// 	container.find('.days').find('.digit_content_second').text(days[1]);
+			// 	container.find('.days').find('.digit_content_third').hide();
+			// } else {
+			// 	container.find('.days').find('.digit_content_first').text(days[0]);
+			// 	container.find('.days').find('.digit_content_second').text(days[1]);
+			// 	container.find('.days').find('.digit_content_third').show().text(days[1]);
+			// }
 
 			container.find('.hours').find('.digit_content_first').text(hours[0]);
 			container.find('.hours').find('.digit_content_second').text(hours[1]);
