@@ -59,7 +59,6 @@
 
 			// difference of dates
 			var difference = target_date - current_date;
-			console.log('difference', difference)
 
 			// if difference is negative than it's pass the target date
 			if (difference < 0) {
